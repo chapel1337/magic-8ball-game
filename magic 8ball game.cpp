@@ -5,9 +5,6 @@
 using std::cout; using std::cin; using std::ws; using std::string;
 
 string input{ "" };
-// string previousResponses[] { "" };
-// string previousInputs[] { "" };
-// int responsesCount{ 0 };
 
 bool noteSent{ false };
 
@@ -186,28 +183,8 @@ void shake8Ball()
     cout << "> " << input << "\n\n";
 
     system("pause");
-
-    // ++responsesCount;
+    
     input = "";
-
-    /*
-    previousResponses[responsesCount] += possibleResponses[random];
-    previousInputs[responsesCount] += input;
-
-    cout << responsesCount << '\n';
-    cout << possibleResponses[random] << '\n';
-    cout << input << '\n';
-
-    for (int i{ 0 }; i < std::ssize(previousResponses); ++i)
-    {
-        cout << previousResponses[i] << '\n';
-    }
-
-    for (int i{ 0 }; i < std::ssize(previousInputs); ++i)
-    {
-        cout << previousInputs[i] << '\n';
-    }
-    */
     
     menu();
 }
@@ -234,122 +211,6 @@ void start()
 
 // ------- \\
 
-/*
-
-void insultingResponses()
-{
-
-}
-
-void funnyResponses()
-{
-
-}
-
-void moaiResponses()
-{
-    
-}
-
-void changeResponsesMenu()
-{
-    clear();
-    title("magic 8ball - change responses");
-
-    char response{};
-
-    cout << "1. insulting responses\n";
-    cout << "2. funny responses\n";
-    cout << "3. 🗿 responses\n";
-
-    cout << "> ";
-    cin >> response;
-
-    switch (response)
-    {
-    case '1':
-        insultingResponses();
-        break;
-
-    case '2':
-        funnyResponses();
-        break;
-
-    case '3':
-        moaiResponses();
-        break;
-
-    default:
-        invalidInput("settings");
-        break;
-    }
-}
-
-// ------- \\
-
-
-void changeColorMenu()
-{
-    clear();
-
-}
-
-
-void settings()
-{
-    clear();
-    title("magic 8ball - settings");
-
-    char response{};
-
-    cout << "1. change responses\n";
-    cout << "2. change color\n";
-    cout << "3. back\n";
-
-    cin >> response;
-
-    switch (response)
-    {
-        case '1':
-            changeResponsesMenu();
-        break;
-
-        case '2':
-            changeColorMenu();
-        break;
-
-        case '3':
-            menu();
-        break;
-    }
-}
-
-
-void previouslyAnswered()
-{
-    clear();
-    title("magic 8ball - previously responses");
-
-    if (!noteSent)
-    {
-        cout << "note: this data is wiped when you exit the program\n";
-        noteSent = true;
-
-        // sleep(2);
-        clear();
-    }
-
-    for (int i{ 0 }; i < std::ssize(previousResponses); ++i)
-    {
-        cout << "input: " << previousInputs[i] << '\n';
-        cout << "response: " << previousResponses[i] << "\n\n";
-    }
-
-    system("pause");
-    menu();
-}
-*/
-
 void quit()
 {
     clear();
@@ -374,7 +235,6 @@ void menu()
     char response{};
 
     cout << "1. start\n";
-    // cout << "2. settings\n";
     cout << "2. quit\n\n";
 
     cout << "> ";
@@ -386,12 +246,6 @@ void menu()
             start();
             break;
 
-            /*
-        case '2':
-            settings();
-            break;
-            */
-
         case '2':
             quit();
             break;
@@ -402,6 +256,7 @@ void menu()
     }
 }
 
+// useless
 void invalidInput(string returnFunction)
 {
     clear();
@@ -417,12 +272,6 @@ void invalidInput(string returnFunction)
     {
         menu();
     }
-    /*
-    else if (returnFunction == "settings")
-    {
-        settings();
-    }
-    */
 }
 
 int main()
