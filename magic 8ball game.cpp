@@ -4,6 +4,12 @@
 #include <windows.h>
 using std::cout; using std::cin; using std::ws; using std::string;
 
+// written by chapel1337
+// made on 10/4/2022
+// unfinished, minimalistic version
+// i was banging my head against dry wall trying to get a previous response system to work
+// this is still a wip, but my ps2 network adapter arrived and i probably won't be working on this anymore today
+
 string input{ "" };
 
 bool noteSent{ false };
